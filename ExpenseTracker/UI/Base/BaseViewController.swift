@@ -8,3 +8,12 @@
 import Foundation
 import UIKit
 
+protocol BaseView {
+    
+    var coordinator: CoordinatorDelegate? { get }
+}
+
+class BaseViewController: UIViewController {
+    
+}
+
