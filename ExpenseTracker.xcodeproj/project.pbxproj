@@ -21,6 +21,18 @@
 		17571EDB25E4EF8E00EC9178 /* Date+firstAndLastDayInMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17571EDA25E4EF8E00EC9178 /* Date+firstAndLastDayInMonth.swift */; };
 		17571EE525E4F43500EC9178 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17571EE425E4F43500EC9178 /* BaseViewController.swift */; };
 		17571EFB25E4F9C500EC9178 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17571EFA25E4F9C500EC9178 /* Coordinator.swift */; };
+		17571F1125E4FEF800EC9178 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17571F1025E4FEF800EC9178 /* ViewModel.swift */; };
+		17571F1A25E4FFEE00EC9178 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17571F1925E4FFEE00EC9178 /* GradientView.swift */; };
+		17571F2025E5002600EC9178 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17571F1E25E5002600EC9178 /* HeaderView.swift */; };
+		17571F2125E5002600EC9178 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17571F1F25E5002600EC9178 /* HeaderView.xib */; };
+		17571F2625E50BEF00EC9178 /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17571F2525E50BEF00EC9178 /* Money.swift */; };
+		17571F3425E5143F00EC9178 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17571F3225E5143F00EC9178 /* EmptyView.swift */; };
+		17571F3A25E5184D00EC9178 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17571F3925E5184D00EC9178 /* ItemCell.swift */; };
+		17571F3F25E51A2A00EC9178 /* Date+Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17571F3E25E51A2A00EC9178 /* Date+Formatters.swift */; };
+		17571F4425E51FA500EC9178 /* UIView+fromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17571F4325E51FA500EC9178 /* UIView+fromNib.swift */; };
+		17571F4925E52C2A00EC9178 /* BalanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17571F4825E52C2900EC9178 /* BalanceViewModel.swift */; };
+		17571F5125E5425200EC9178 /* EmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17571F5025E5425200EC9178 /* EmptyView.xib */; };
+		17571F6025E63BF000EC9178 /* AddItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17571F5F25E63BF000EC9178 /* AddItemsViewController.swift */; };
 		72FD260CFB91B1E9C5B4A247 /* Pods_ExpenseTracker_ExpenseTrackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 133B0B2766068527F5847258 /* Pods_ExpenseTracker_ExpenseTrackerUITests.framework */; };
 		87184E92CF2C4CFD5CECEBB6 /* Pods_ExpenseTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF1E6569BBE0BE84B41C9A2F /* Pods_ExpenseTracker.framework */; };
 		B19D8A815648053A9012813D /* Pods_ExpenseTrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1A9BAE98F31BA2268E006B /* Pods_ExpenseTrackerTests.framework */; };
@@ -66,6 +78,18 @@
 		17571EDA25E4EF8E00EC9178 /* Date+firstAndLastDayInMonth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+firstAndLastDayInMonth.swift"; sourceTree = "<group>"; };
 		17571EE425E4F43500EC9178 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		17571EFA25E4F9C500EC9178 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		17571F1025E4FEF800EC9178 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		17571F1925E4FFEE00EC9178 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		17571F1E25E5002600EC9178 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		17571F1F25E5002600EC9178 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		17571F2525E50BEF00EC9178 /* Money.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
+		17571F3225E5143F00EC9178 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		17571F3925E5184D00EC9178 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		17571F3E25E51A2A00EC9178 /* Date+Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formatters.swift"; sourceTree = "<group>"; };
+		17571F4325E51FA500EC9178 /* UIView+fromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+fromNib.swift"; sourceTree = "<group>"; };
+		17571F4825E52C2900EC9178 /* BalanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceViewModel.swift; sourceTree = "<group>"; };
+		17571F5025E5425200EC9178 /* EmptyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyView.xib; sourceTree = "<group>"; };
+		17571F5F25E63BF000EC9178 /* AddItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemsViewController.swift; sourceTree = "<group>"; };
 		4A26AC03404F7B6A774976D0 /* Pods-ExpenseTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpenseTrackerTests.release.xcconfig"; path = "Target Support Files/Pods-ExpenseTrackerTests/Pods-ExpenseTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
 		8ED7C653D2C3D1E0E2500F22 /* Pods-ExpenseTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpenseTracker.release.xcconfig"; path = "Target Support Files/Pods-ExpenseTracker/Pods-ExpenseTracker.release.xcconfig"; sourceTree = "<group>"; };
 		AE1A9BAE98F31BA2268E006B /* Pods_ExpenseTrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExpenseTrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +152,7 @@
 		17571E9325E4E5A600EC9178 /* ExpenseTracker */ = {
 			isa = PBXGroup;
 			children = (
+				17571F1825E4FFDD00EC9178 /* Views */,
 				17571ED925E4EF5800EC9178 /* Extensions */,
 				17571ECE25E4EB3A00EC9178 /* Model */,
 				17571ECA25E4E6B500EC9178 /* UI */,
@@ -163,6 +188,7 @@
 		17571ECA25E4E6B500EC9178 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				17571F5E25E63BD300EC9178 /* AddItems */,
 				17571EE325E4F41E00EC9178 /* Balance */,
 				17571EE225E4F41300EC9178 /* Base */,
 			);
@@ -182,6 +208,9 @@
 			isa = PBXGroup;
 			children = (
 				17571EDA25E4EF8E00EC9178 /* Date+firstAndLastDayInMonth.swift */,
+				17571F2525E50BEF00EC9178 /* Money.swift */,
+				17571F3E25E51A2A00EC9178 /* Date+Formatters.swift */,
+				17571F4325E51FA500EC9178 /* UIView+fromNib.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -190,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				17571EE425E4F43500EC9178 /* BaseViewController.swift */,
+				17571F1025E4FEF800EC9178 /* ViewModel.swift */,
 				17571EFA25E4F9C500EC9178 /* Coordinator.swift */,
 			);
 			path = Base;
@@ -199,8 +229,30 @@
 			isa = PBXGroup;
 			children = (
 				17571E9825E4E5A600EC9178 /* BalanceViewController.swift */,
+				17571F4825E52C2900EC9178 /* BalanceViewModel.swift */,
+				17571F1E25E5002600EC9178 /* HeaderView.swift */,
+				17571F1F25E5002600EC9178 /* HeaderView.xib */,
+				17571F3225E5143F00EC9178 /* EmptyView.swift */,
+				17571F5025E5425200EC9178 /* EmptyView.xib */,
+				17571F3925E5184D00EC9178 /* ItemCell.swift */,
 			);
 			path = Balance;
+			sourceTree = "<group>";
+		};
+		17571F1825E4FFDD00EC9178 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				17571F1925E4FFEE00EC9178 /* GradientView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		17571F5E25E63BD300EC9178 /* AddItems */ = {
+			isa = PBXGroup;
+			children = (
+				17571F5F25E63BF000EC9178 /* AddItemsViewController.swift */,
+			);
+			path = AddItems;
 			sourceTree = "<group>";
 		};
 		4103D6B7333236C3C64AD245 /* Frameworks */ = {
@@ -337,6 +389,8 @@
 				17571EA425E4E5AA00EC9178 /* LaunchScreen.storyboard in Resources */,
 				17571EA125E4E5AA00EC9178 /* Assets.xcassets in Resources */,
 				17571E9C25E4E5A600EC9178 /* Main.storyboard in Resources */,
+				17571F2125E5002600EC9178 /* HeaderView.xib in Resources */,
+				17571F5125E5425200EC9178 /* EmptyView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,15 +518,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17571F3F25E51A2A00EC9178 /* Date+Formatters.swift in Sources */,
+				17571F4425E51FA500EC9178 /* UIView+fromNib.swift in Sources */,
+				17571F1125E4FEF800EC9178 /* ViewModel.swift in Sources */,
 				17571ED525E4ED2600EC9178 /* Item+CoreDataClass.swift in Sources */,
+				17571F1A25E4FFEE00EC9178 /* GradientView.swift in Sources */,
+				17571F2625E50BEF00EC9178 /* Money.swift in Sources */,
 				17571E9925E4E5A600EC9178 /* BalanceViewController.swift in Sources */,
+				17571F4925E52C2A00EC9178 /* BalanceViewModel.swift in Sources */,
 				17571E9525E4E5A600EC9178 /* AppDelegate.swift in Sources */,
 				17571E9725E4E5A600EC9178 /* SceneDelegate.swift in Sources */,
 				17571ED025E4EC3200EC9178 /* Category+CoreDataClass.swift in Sources */,
+				17571F2025E5002600EC9178 /* HeaderView.swift in Sources */,
 				17571EE525E4F43500EC9178 /* BaseViewController.swift in Sources */,
 				17571E9F25E4E5A600EC9178 /* ExpenseTracker.xcdatamodeld in Sources */,
 				17571EDB25E4EF8E00EC9178 /* Date+firstAndLastDayInMonth.swift in Sources */,
+				17571F3425E5143F00EC9178 /* EmptyView.swift in Sources */,
 				17571EFB25E4F9C500EC9178 /* Coordinator.swift in Sources */,
+				17571F3A25E5184D00EC9178 /* ItemCell.swift in Sources */,
+				17571F6025E63BF000EC9178 /* AddItemsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

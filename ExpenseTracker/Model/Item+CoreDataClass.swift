@@ -10,7 +10,7 @@ import CoreData
 
 @objc class Item: NSManagedObject {
     
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Item> {
+    @nonobjc public class func fetchItemsForCurrentMonth() -> NSFetchRequest<Item> {
         let request = NSFetchRequest<Item>(entityName: "Item")
         let date = Date()
         request.predicate = NSPredicate(format: "date >= %@ and date <= %@", date.startOfMonth as NSDate, date.endOfMonth as NSDate)

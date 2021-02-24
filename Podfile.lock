@@ -1,6 +1,36 @@
 PODS:
   - Alamofire (5.4.1)
   - JGProgressHUD (2.2)
+  - MaterialComponents/AnimationTiming (121.0.0)
+  - MaterialComponents/Availability (121.0.0)
+  - MaterialComponents/private/Math (121.0.0)
+  - "MaterialComponents/private/TextControlsPrivate+BaseStyle (121.0.0)":
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/private/Math
+    - "MaterialComponents/private/TextControlsPrivate+Shared"
+  - "MaterialComponents/private/TextControlsPrivate+OutlinedStyle (121.0.0)":
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Math
+    - "MaterialComponents/private/TextControlsPrivate+Shared"
+  - "MaterialComponents/private/TextControlsPrivate+Shared (121.0.0)":
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/private/Math
+    - "MaterialComponents/TextControls+Enums"
+  - "MaterialComponents/private/TextControlsPrivate+TextFields (121.0.0)":
+    - MaterialComponents/private/Math
+    - "MaterialComponents/private/TextControlsPrivate+Shared"
+  - "MaterialComponents/TextControls+BaseTextFields (121.0.0)":
+    - "MaterialComponents/private/TextControlsPrivate+BaseStyle"
+    - "MaterialComponents/private/TextControlsPrivate+Shared"
+    - "MaterialComponents/private/TextControlsPrivate+TextFields"
+    - MDFInternationalization
+  - "MaterialComponents/TextControls+Enums (121.0.0)"
+  - "MaterialComponents/TextControls+OutlinedTextFields (121.0.0)":
+    - MaterialComponents/Availability
+    - "MaterialComponents/private/TextControlsPrivate+OutlinedStyle"
+    - "MaterialComponents/TextControls+BaseTextFields"
+  - MDFInternationalization (2.0.0)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -11,6 +41,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 5.1)
   - JGProgressHUD (~> 2.1)
+  - "MaterialComponents/TextControls+OutlinedTextFields"
   - RxCocoa (~> 5.1.1)
   - RxSwift (~> 5.1.1)
 
@@ -18,6 +49,8 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - JGProgressHUD
+    - MaterialComponents
+    - MDFInternationalization
     - RxCocoa
     - RxRelay
     - RxSwift
@@ -25,10 +58,12 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   JGProgressHUD: d83d7a981b85d11205e19ff8ad5bb9c40571c847
+  MaterialComponents: 2f6563c398b29e001cc58a764359b9fcbd991ca7
+  MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
 
-PODFILE CHECKSUM: 883acff7236f71159804602f769a5ad5082b8e73
+PODFILE CHECKSUM: 11e3da30257cbbfcc8e57b215428a55ef9483c61
 
 COCOAPODS: 1.10.0

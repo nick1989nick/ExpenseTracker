@@ -15,10 +15,17 @@ protocol CoordinatorDelegate {
 
 class Coordinator: CoordinatorDelegate {
     
-    let viewController: BaseViewController
+    weak var viewController: BaseViewController?
     
-    func pop() {
-        
+    init(viewController: BaseViewController) {
+        self.viewController = viewController
     }
     
+    func pop() {
+        viewController?.dismiss(animated: true, completion: nil)
+    }
+    
+    func present(viewController: BaseViewController) {
+        self.viewController?.present(viewController, animated: true, completion: nil)
+    }
 }
