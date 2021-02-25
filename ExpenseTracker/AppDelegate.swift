@@ -10,11 +10,26 @@ import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let categoriesSaved = UserDefaults.standard.bool(forKey: "categories")
+        
+        if !categoriesSaved {
+            let context = persistentContainer.viewContext
+            Category.insert(context: context, name: "Food")
+            Category.insert(context: context, name: "Utilities")
+            Category.insert(context: context, name: "Transportation")
+            Category.insert(context: context, name: "Clothing")
+            Category.insert(context: context, name: "Insurence")
+            Category.insert(context: context, name: "Supplies")
+            Category.insert(context: context, name: "Debt")
+            Category.insert(context: context, name: "Personal")
+            Category.insert(context: context, name: "Income")
+            
+            UserDefaults.standard.setValue(true, forKey: "categories")
+        }
         return true
     }
 

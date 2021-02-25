@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1748C82B25E65E1C00370182 /* AddItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1748C82A25E65E1C00370182 /* AddItemsViewModel.swift */; };
+		1748C83025E65ECD00370182 /* AddItemsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1748C82F25E65ECD00370182 /* AddItemsCoordinator.swift */; };
 		17571E9525E4E5A600EC9178 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17571E9425E4E5A600EC9178 /* AppDelegate.swift */; };
 		17571E9725E4E5A600EC9178 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17571E9625E4E5A600EC9178 /* SceneDelegate.swift */; };
 		17571E9925E4E5A600EC9178 /* BalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17571E9825E4E5A600EC9178 /* BalanceViewController.swift */; };
@@ -58,6 +60,8 @@
 /* Begin PBXFileReference section */
 		041091CD8A269F5DE4D9D5D4 /* Pods-ExpenseTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpenseTrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-ExpenseTrackerTests/Pods-ExpenseTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		133B0B2766068527F5847258 /* Pods_ExpenseTracker_ExpenseTrackerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExpenseTracker_ExpenseTrackerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1748C82A25E65E1C00370182 /* AddItemsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemsViewModel.swift; sourceTree = "<group>"; };
+		1748C82F25E65ECD00370182 /* AddItemsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemsCoordinator.swift; sourceTree = "<group>"; };
 		17571E9125E4E5A600EC9178 /* ExpenseTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpenseTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17571E9425E4E5A600EC9178 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17571E9625E4E5A600EC9178 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -251,6 +255,8 @@
 			isa = PBXGroup;
 			children = (
 				17571F5F25E63BF000EC9178 /* AddItemsViewController.swift */,
+				1748C82A25E65E1C00370182 /* AddItemsViewModel.swift */,
+				1748C82F25E65ECD00370182 /* AddItemsCoordinator.swift */,
 			);
 			path = AddItems;
 			sourceTree = "<group>";
@@ -527,6 +533,7 @@
 				17571E9925E4E5A600EC9178 /* BalanceViewController.swift in Sources */,
 				17571F4925E52C2A00EC9178 /* BalanceViewModel.swift in Sources */,
 				17571E9525E4E5A600EC9178 /* AppDelegate.swift in Sources */,
+				1748C82B25E65E1C00370182 /* AddItemsViewModel.swift in Sources */,
 				17571E9725E4E5A600EC9178 /* SceneDelegate.swift in Sources */,
 				17571ED025E4EC3200EC9178 /* Category+CoreDataClass.swift in Sources */,
 				17571F2025E5002600EC9178 /* HeaderView.swift in Sources */,
@@ -534,6 +541,7 @@
 				17571E9F25E4E5A600EC9178 /* ExpenseTracker.xcdatamodeld in Sources */,
 				17571EDB25E4EF8E00EC9178 /* Date+firstAndLastDayInMonth.swift in Sources */,
 				17571F3425E5143F00EC9178 /* EmptyView.swift in Sources */,
+				1748C83025E65ECD00370182 /* AddItemsCoordinator.swift in Sources */,
 				17571EFB25E4F9C500EC9178 /* Coordinator.swift in Sources */,
 				17571F3A25E5184D00EC9178 /* ItemCell.swift in Sources */,
 				17571F6025E63BF000EC9178 /* AddItemsViewController.swift in Sources */,

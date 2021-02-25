@@ -35,11 +35,11 @@ class HeaderView: UIView {
     
     
     func setup(totalBalance: Money, incomeBalance: Money, expenseBalance: Money) {
+        
         self.totalBalance.text = totalBalance.formatAmount()
         self.incomeBalance.text = incomeBalance.formatAmount()
         self.expenseBalance.text = expenseBalance.formatAmount()
     }
-
 }
 
 

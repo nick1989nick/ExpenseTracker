@@ -11,6 +11,7 @@ import UIKit
 protocol CoordinatorDelegate {
     
     func pop()
+    func present(viewController: BaseViewController)
 }
 
 class Coordinator: CoordinatorDelegate {
