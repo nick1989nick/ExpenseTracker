@@ -10,6 +10,7 @@ import UIKit
 protocol BalanceViewControllerView: AnyObject {
     func showData(item: [Item])
     func showEmptyView()
+    func showHeaderValues(income: Money, expense: Money, balance: Money)
 }
 
 class BalanceViewController: UIViewController, BalanceViewControllerView {
@@ -63,6 +64,10 @@ class BalanceViewController: UIViewController, BalanceViewControllerView {
             view.addConstrained(subview: emptyView)
         }
     }
+    
+    func showHeaderValues(income: Money, expense: Money, balance: Money) {
+        headerView?.setup(totalBalance: balance, incomeBalance: income, expenseBalance: expense)
+    }
 
 }
 
@@ -76,9 +81,21 @@ extension BalanceViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell") as! ItemCell
         let item = items[indexPath.row]
         cell.name.text = item.name
+        cell.selectionStyle = .none
+        if item.type == "Expense" {
+            cell.amount.textColor = UIColor(named: "redExpense")
+        } else {
+            cell.amount.textColor = UIColor(named: "greenIncome")
+        }
         cell.amount.text = (item.amount as Money).formatAmount()
-        cell.date.text = item.date.toString(format: "MMM dd, yyyy at hh:mm a")
+        cell.date.text = "\(item.date.toString(format: "MMM dd, yyyy")) at \(item.date.toString(format: "hh:mm a")) "
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            viewModel?.deleteItem(item: items[indexPath.row])
+        }
     }
 
 }

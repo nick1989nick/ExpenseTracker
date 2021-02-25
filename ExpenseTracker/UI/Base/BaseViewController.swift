@@ -13,7 +13,20 @@ protocol BaseView {
     var coordinator: CoordinatorDelegate? { get }
 }
 
-class BaseViewController: UIViewController {
+class BaseViewController: UIViewController, BaseView {
     
+    public var coordinator: CoordinatorDelegate?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        coordinator = Coordinator(viewController: self)
+    }
+    
+    func instantiateFromStoryboard<T>(_ storyboard: String = "Main", viewController: String) -> T {
+        let storyboard = UIStoryboard(name: storyboard, bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: viewController)
+        return viewController as! T
+    }
 }
 

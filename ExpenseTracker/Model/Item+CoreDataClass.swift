@@ -22,9 +22,21 @@ import CoreData
         return NSEntityDescription.entity(forEntityName: "Item", in: context)!
     }
     
+    class func insert(context: NSManagedObjectContext, amount: Double, date: Date, name: String, type: String, categoryId: Category) {
+        let item = Item(entity: getEntityDescription(context: context), insertInto: context)
+        item.name = name
+        item.date = date
+        item.type = type
+        item.amount = amount
+        item.categoryId = categoryId
+        try? context.save()
+        
+    }
+    
+    
     @NSManaged public var amount: Double
     @NSManaged public var date: Date
     @NSManaged public var name: String
     @NSManaged public var type: String
-    
+    @NSManaged public var categoryId: Category
 }
