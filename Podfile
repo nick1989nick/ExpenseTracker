@@ -11,6 +11,7 @@ target 'ExpenseTracker' do
   pod 'RxSwift', '~> 5.1.1'
   pod 'JGProgressHUD', '~> 2.1'
   pod 'MaterialComponents/TextControls+OutlinedTextFields'
+  pod 'Charts', '~> 3.5.0'
 
   target 'ExpenseTrackerTests' do
     inherit! :search_paths

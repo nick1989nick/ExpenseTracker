@@ -49,18 +49,25 @@ class AddItemsViewController: BaseViewController, AddItemsView, UITextFieldDeleg
         super.viewDidLoad()
         
         viewModel = AddItemsViewModel(addItemsView: self, coordinator: AddItemsCoordinator(viewController: self))
-        viewModel?.getCategories()
         categoryTextField.inputView = categoryPicker
+        
         categoryPicker.dataSource = self
         categoryPicker.delegate = self
         typePicker.dataSource = self
         typePicker.delegate = self
+        
         
         setupNameTextView()
         setupTypeTextView()
         setupDateTextView()
         setupAmoutTextView()
         addDoneButtonOnKeyboard()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        viewModel?.getCategories()
+        categoryPicker.becomeFirstResponder()
     }
     
     func showCategories(categories: [Category]) {
@@ -105,6 +112,7 @@ class AddItemsViewController: BaseViewController, AddItemsView, UITextFieldDeleg
         name.setOutlineColor(.gray, for: .normal)
         name.setOutlineColor(.gray, for: .editing)
         nameView.addConstrained(subview: name)
+        
     }
     
     func setupDateTextView() {
@@ -165,18 +173,26 @@ class AddItemsViewController: BaseViewController, AddItemsView, UITextFieldDeleg
         let items = [flexSpace, done]
         doneToolbar.items = items
         doneToolbar.sizeToFit()
-        if let name = name, let amount = amount {
+        if let name = name, let amount = amount, let type = type {
             name.inputAccessoryView = doneToolbar
             amount.inputAccessoryView = doneToolbar
+            type.inputAccessoryView = doneToolbar
+            categoryTextField.inputAccessoryView = doneToolbar
         }
         
     }
     
     @objc func doneButtonAction() {
-        if let name = name, let amount = amount {
+        if let name = name, let amount = amount, let type = type {
             name.resignFirstResponder()
             amount.resignFirstResponder()
+            type.resignFirstResponder()
+            categoryTextField.resignFirstResponder()
         }
+    }
+    
+    @objc func donePicker(sender: Any) {
+        categoryTextField.resignFirstResponder()
     }
     
     func showAlert(title: String, text: String) {

@@ -19,12 +19,13 @@ import CoreData
         return NSEntityDescription.entity(forEntityName: "Category", in: context)!
     }
     
-    class func insert(context: NSManagedObjectContext, name: String) {
+    class func insert(context: NSManagedObjectContext, id: Int16, name: String) {
         let category = Category(entity: getEntityDescription(context: context), insertInto: context)
+        category.id = id
         category.name = name
         try? context.save()
     }
     
-    @NSManaged public var id: String
+    @NSManaged public var id: Int16
     @NSManaged public var name: String
 }

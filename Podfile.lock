@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (5.4.1)
+  - Charts (3.5.0):
+    - Charts/Core (= 3.5.0)
+  - Charts/Core (3.5.0)
   - JGProgressHUD (2.2)
   - MaterialComponents/AnimationTiming (121.0.0)
   - MaterialComponents/Availability (121.0.0)
@@ -40,6 +43,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 5.1)
+  - Charts (~> 3.5.0)
   - JGProgressHUD (~> 2.1)
   - "MaterialComponents/TextControls+OutlinedTextFields"
   - RxCocoa (~> 5.1.1)
@@ -48,6 +52,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Charts
     - JGProgressHUD
     - MaterialComponents
     - MDFInternationalization
@@ -57,6 +62,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  Charts: 40a08591df1f8ad5c223ddedfb1a06da92f24f7c
   JGProgressHUD: d83d7a981b85d11205e19ff8ad5bb9c40571c847
   MaterialComponents: 2f6563c398b29e001cc58a764359b9fcbd991ca7
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
@@ -64,6 +70,6 @@ SPEC CHECKSUMS:
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
 
-PODFILE CHECKSUM: 11e3da30257cbbfcc8e57b215428a55ef9483c61
+PODFILE CHECKSUM: b06498ca16a5b4378180ff38394d58774e6edad8
 
 COCOAPODS: 1.10.0

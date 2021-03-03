@@ -21,8 +21,8 @@ class AddItemsViewModel: ViewModel, AddItemsViewModelDelegate {
     var selectedCategory: Category?
     var selectedType: String?
     var selectedDate: Date?
-    let addItemsView: AddItemsView
-    let coordinator: AddItemsCoordinatorDelegate
+    var addItemsView: AddItemsView
+    var coordinator: AddItemsCoordinatorDelegate
     
     init(addItemsView: AddItemsView, coordinator: AddItemsCoordinatorDelegate) {
         self.addItemsView = addItemsView

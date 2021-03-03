@@ -33,6 +33,18 @@ import CoreData
         
     }
     
+    class func fetchItems(start: Date, end: Date, categories: [Category]?) -> NSFetchRequest<Item> {
+        let request = NSFetchRequest<Item>(entityName: "Item")
+        
+        if let categories = categories, !categories.isEmpty {
+            request.predicate = NSPredicate(format: "date >= %@ and date <= %@ and categoryId in (%@)", start as NSDate, end as NSDate, categories)
+        } else {
+            request.predicate = NSPredicate(format: "date >= %@ and date <= %@", start as NSDate, end as NSDate)
+        }
+        
+        return request
+    }
+    
     
     @NSManaged public var amount: Double
     @NSManaged public var date: Date

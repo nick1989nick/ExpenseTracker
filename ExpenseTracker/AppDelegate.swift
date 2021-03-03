@@ -18,15 +18,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if !categoriesSaved {
             let context = persistentContainer.viewContext
-            Category.insert(context: context, name: "Food")
-            Category.insert(context: context, name: "Utilities")
-            Category.insert(context: context, name: "Transportation")
-            Category.insert(context: context, name: "Clothing")
-            Category.insert(context: context, name: "Insurence")
-            Category.insert(context: context, name: "Supplies")
-            Category.insert(context: context, name: "Debt")
-            Category.insert(context: context, name: "Personal")
-            Category.insert(context: context, name: "Income")
+            Category.insert(context: context, id: 1, name: "Food")
+            Category.insert(context: context, id: 2, name: "Utilities")
+            Category.insert(context: context, id: 3, name: "Transportation")
+            Category.insert(context: context, id: 4, name: "Clothing")
+            Category.insert(context: context, id: 5, name: "Insurence")
+            Category.insert(context: context, id: 6, name: "Supplies")
+            Category.insert(context: context, id: 7, name: "Debt")
+            Category.insert(context: context, id: 8, name: "Personal")
+            Category.insert(context: context, id: 9, name: "Income")
             
             UserDefaults.standard.setValue(true, forKey: "categories")
         }
