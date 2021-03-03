@@ -48,6 +48,7 @@ class BalanceViewModel: ViewModel, BalanceViewModelDelegate {
     
     func deleteItem(item: Item) {
         context.delete(item)
+        try? context.save()
         getData()
     }
 

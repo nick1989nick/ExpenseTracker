@@ -32,6 +32,7 @@ class BalanceViewController: UIViewController, BalanceViewControllerView {
         viewModel = BalanceViewModel(balanceViewDelegate: self)
         headerView = .fromNib()
         tableView.tableHeaderView = headerView
+        tableView.tableFooterView = UIView()
         headerView?.setup(totalBalance: 0.0, incomeBalance: 0.0, expenseBalance: 0.0)
        
     }
@@ -44,7 +45,7 @@ class BalanceViewController: UIViewController, BalanceViewControllerView {
     
     func showData(item: [Item]) {
         view.subviews.forEach { (view) in
-            if view === EmptyView.self {
+            if view is EmptyView {
                 view.removeFromSuperview()
             }
         }
@@ -54,7 +55,7 @@ class BalanceViewController: UIViewController, BalanceViewControllerView {
     func showEmptyView() {
         var hasEmptyView = false
         view.subviews.forEach { (view) in
-            if view === EmptyView.self {
+            if view is EmptyView {
                 hasEmptyView = true
             }
         }
