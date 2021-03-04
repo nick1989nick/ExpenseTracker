@@ -21,27 +21,21 @@ class AddItemsViewController: BaseViewController, AddItemsView, UITextFieldDeleg
     
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var categoryTextField: UITextField!
-    @IBOutlet var typeView: UIView!
     @IBOutlet var nameView: UIView!
     @IBOutlet var dateView: UIView!
     @IBOutlet var amountView: UIView!
     
-    var type: MDCOutlinedTextField?
+    
     var name: MDCOutlinedTextField?
     var date: MDCOutlinedTextField?
     var amount: MDCOutlinedTextField?
-    var types = ["Expense","Income"] {
-        didSet {
-            typePicker.reloadAllComponents()
-        }
-    }
     var categories: [Category] = [] {
         didSet {
             categoryPicker.reloadAllComponents()
         }
     }
     let categoryPicker = UIPickerView()
-    let typePicker = UIPickerView()
+   
    
     var viewModel: AddItemsViewModelDelegate?
     
@@ -53,12 +47,8 @@ class AddItemsViewController: BaseViewController, AddItemsView, UITextFieldDeleg
         
         categoryPicker.dataSource = self
         categoryPicker.delegate = self
-        typePicker.dataSource = self
-        typePicker.delegate = self
-        
         
         setupNameTextView()
-        setupTypeTextView()
         setupDateTextView()
         setupAmoutTextView()
         addDoneButtonOnKeyboard()
@@ -79,24 +69,6 @@ class AddItemsViewController: BaseViewController, AddItemsView, UITextFieldDeleg
     
     @IBAction func onSaveTapped() {
         viewModel?.save(name: name?.text, amount: amount?.text)
-
-    }
-    
-    func setupTypeTextView() {
-        type = MDCOutlinedTextField(frame: typeView.frame)
-        guard let type = type else {
-            return
-        }
-        
-        type.sizeToFit()
-        type.autocapitalizationType = .none
-        type.placeholder = "Type"
-        type.label.text = "Type"
-        type.setOutlineColor(.gray, for: .normal)
-        type.setOutlineColor(.gray, for: .editing)
-        type.inputView = typePicker
-        typeView.addConstrained(subview: type)
-
     }
     
     func setupNameTextView() {
@@ -173,20 +145,18 @@ class AddItemsViewController: BaseViewController, AddItemsView, UITextFieldDeleg
         let items = [flexSpace, done]
         doneToolbar.items = items
         doneToolbar.sizeToFit()
-        if let name = name, let amount = amount, let type = type {
+        if let name = name, let amount = amount {
             name.inputAccessoryView = doneToolbar
             amount.inputAccessoryView = doneToolbar
-            type.inputAccessoryView = doneToolbar
             categoryTextField.inputAccessoryView = doneToolbar
         }
         
     }
     
     @objc func doneButtonAction() {
-        if let name = name, let amount = amount, let type = type {
+        if let name = name, let amount = amount {
             name.resignFirstResponder()
             amount.resignFirstResponder()
-            type.resignFirstResponder()
             categoryTextField.resignFirstResponder()
         }
     }
@@ -206,11 +176,10 @@ class AddItemsViewController: BaseViewController, AddItemsView, UITextFieldDeleg
         name?.text = ""
         amount?.text = ""
         date?.text = ""
-        type?.text = types[0]
-        viewModel?.selectedType = types[0]
         categoryTextField.text = categories[0].name
         viewModel?.selectedCategory = categories[0]
-        
+        categoryPicker.reloadAllComponents()
+
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -237,43 +206,19 @@ extension AddItemsViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        
-        switch pickerView {
-        case categoryPicker:
-            return categories.count
-        case typePicker:
-            return types.count
-        default:
-            return 0
-        }
+        return categories.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        switch pickerView {
-        case categoryPicker:
-            let title = categories[row].name
-            return title
-        case typePicker:
-            let title = types[row]
-            return title
-        default:
-            return nil
-        }
-        
+        let title = categories[row].name
+        return title
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        switch pickerView {
-        case categoryPicker:
-            let category = categories[row]
-            viewModel?.selectedCategory = category
-            categoryTextField.text = category.name
-        case typePicker:
-            let item = types[row]
-            viewModel?.selectedType = item
-            type?.text = item
-        default:
-            1
-        }
+     
+        let category = categories[row]
+        viewModel?.selectedCategory = category
+        categoryTextField.text = category.name
+       
     }
 }

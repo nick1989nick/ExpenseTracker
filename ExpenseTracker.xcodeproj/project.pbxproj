@@ -39,6 +39,7 @@
 		17571F4925E52C2A00EC9178 /* BalanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17571F4825E52C2900EC9178 /* BalanceViewModel.swift */; };
 		17571F5125E5425200EC9178 /* EmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17571F5025E5425200EC9178 /* EmptyView.xib */; };
 		17571F6025E63BF000EC9178 /* AddItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17571F5F25E63BF000EC9178 /* AddItemsViewController.swift */; };
+		175A924225EFC9DE002381E2 /* String+subString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175A924125EFC9DE002381E2 /* String+subString.swift */; };
 		17750C6525EE22D70025A782 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17750C6425EE22D70025A782 /* CategoryViewModel.swift */; };
 		17750C6B25EE244A0025A782 /* SelectFiltersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17750C6A25EE244A0025A782 /* SelectFiltersCoordinator.swift */; };
 		17750C8525EE784B0025A782 /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17750C8425EE784B0025A782 /* BarChartView.swift */; };
@@ -109,6 +110,7 @@
 		17571F4825E52C2900EC9178 /* BalanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceViewModel.swift; sourceTree = "<group>"; };
 		17571F5025E5425200EC9178 /* EmptyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyView.xib; sourceTree = "<group>"; };
 		17571F5F25E63BF000EC9178 /* AddItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemsViewController.swift; sourceTree = "<group>"; };
+		175A924125EFC9DE002381E2 /* String+subString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+subString.swift"; sourceTree = "<group>"; };
 		17750C6425EE22D70025A782 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		17750C6A25EE244A0025A782 /* SelectFiltersCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFiltersCoordinator.swift; sourceTree = "<group>"; };
 		17750C8425EE784B0025A782 /* BarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				17571F2525E50BEF00EC9178 /* Money.swift */,
 				17571F3E25E51A2A00EC9178 /* Date+Formatters.swift */,
 				17571F4325E51FA500EC9178 /* UIView+fromNib.swift */,
+				175A924125EFC9DE002381E2 /* String+subString.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -602,6 +605,7 @@
 				1791DA4C25EE1E6B009978BD /* CategoryFilterViewController.swift in Sources */,
 				17571ED025E4EC3200EC9178 /* Category+CoreDataClass.swift in Sources */,
 				174EEF9C25ECE5B500F52AD4 /* SelectionHeaderView.swift in Sources */,
+				175A924225EFC9DE002381E2 /* String+subString.swift in Sources */,
 				17750C6525EE22D70025A782 /* CategoryViewModel.swift in Sources */,
 				17571F2025E5002600EC9178 /* HeaderView.swift in Sources */,
 				17571EE525E4F43500EC9178 /* BaseViewController.swift in Sources */,
