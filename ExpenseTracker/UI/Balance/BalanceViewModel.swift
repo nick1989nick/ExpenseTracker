@@ -27,6 +27,7 @@ class BalanceViewModel: ViewModel, BalanceViewModelDelegate {
         do {
             let items = try context.fetch(request)
             if items.isEmpty {
+                balanceViewDelegate?.showHeaderValues(income: 0.0, expense: 0.0, balance: 0.0)
                 balanceViewDelegate?.showEmptyView()
             } else {
                 let income = items.filter { $0.type == "Income" }.reduce(0.0) { (result, item) -> Double in
@@ -42,6 +43,7 @@ class BalanceViewModel: ViewModel, BalanceViewModelDelegate {
                 balanceViewDelegate?.showData(item: items)
             }
         } catch {
+            balanceViewDelegate?.showHeaderValues(income: 0.0, expense: 0.0, balance: 0.0)
             balanceViewDelegate?.showEmptyView()
         }
     }

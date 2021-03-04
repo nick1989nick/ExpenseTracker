@@ -32,7 +32,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tLG-mY-zYa">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tLG-mY-zYa">
                                 <rect key="frame" x="0.0" y="99" width="414" height="714"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -107,7 +107,7 @@
                             <constraint firstItem="tKh-zK-hyV" firstAttribute="trailing" secondItem="tLG-mY-zYa" secondAttribute="trailing" id="z6F-Fw-jup"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Graphs" image="rectangle.split.3x1" catalog="system" id="dBz-fJ-B0M"/>
+                    <tabBarItem key="tabBarItem" title="Graphs" image="chart.bar.xaxis" catalog="system" id="dBz-fJ-B0M"/>
                     <connections>
                         <outlet property="tableView" destination="tLG-mY-zYa" id="4sA-Od-HQl"/>
                     </connections>
@@ -392,7 +392,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="categoryArrow" translatesAutoresizingMaskIntoConstraints="NO" id="TvT-JG-iQp">
-                                                        <rect key="frame" x="325" y="151" width="16" height="10"/>
+                                                        <rect key="frame" x="325" y="141" width="16" height="10"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="16" id="DIa-9a-vj4"/>
                                                             <constraint firstAttribute="height" constant="10" id="uEC-2D-mNF"/>
@@ -404,7 +404,7 @@
                                                     <constraint firstAttribute="trailing" secondItem="TvT-JG-iQp" secondAttribute="trailing" constant="73" id="2CH-Oo-rG4"/>
                                                     <constraint firstItem="Gob-Ju-VBl" firstAttribute="leading" secondItem="5GC-gX-le4" secondAttribute="leading" constant="20" id="3al-Qd-afI"/>
                                                     <constraint firstItem="Gob-Ju-VBl" firstAttribute="top" secondItem="ZHF-8J-OED" secondAttribute="bottom" constant="15" id="7w2-pf-gHS"/>
-                                                    <constraint firstItem="TvT-JG-iQp" firstAttribute="top" secondItem="ZHF-8J-OED" secondAttribute="bottom" constant="45" id="DXm-KR-Yt0"/>
+                                                    <constraint firstItem="TvT-JG-iQp" firstAttribute="top" secondItem="ZHF-8J-OED" secondAttribute="bottom" constant="35" id="DXm-KR-Yt0"/>
                                                     <constraint firstAttribute="height" constant="270" id="Unz-fC-g5A"/>
                                                     <constraint firstItem="ZHF-8J-OED" firstAttribute="top" secondItem="5GC-gX-le4" secondAttribute="top" constant="89" id="eJO-8F-x2u"/>
                                                     <constraint firstAttribute="trailing" secondItem="Gob-Ju-VBl" secondAttribute="trailing" constant="20" id="eRX-v1-pil"/>
@@ -435,29 +435,22 @@
                                                     <action selector="onSaveTapped" destination="pKs-Av-Ju2" eventType="touchUpInside" id="3kK-EL-Rrq"/>
                                                 </connections>
                                             </button>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vCJ-Mg-c7q">
-                                                <rect key="frame" x="20" y="316" width="374" height="44"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="44" id="HeC-iH-twa"/>
-                                                </constraints>
-                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ea0-bM-rUU">
-                                                <rect key="frame" x="20" y="387" width="374" height="44"/>
+                                                <rect key="frame" x="20" y="320" width="374" height="44"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="gcO-08-pph"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Vn-KB-trc">
-                                                <rect key="frame" x="20" y="458" width="374" height="44"/>
+                                                <rect key="frame" x="20" y="391" width="374" height="44"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="ef6-Kn-hJX"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KKB-F7-wTB">
-                                                <rect key="frame" x="20" y="529" width="374" height="44"/>
+                                                <rect key="frame" x="20" y="462" width="374" height="44"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="Z06-GR-Hpq"/>
@@ -467,23 +460,20 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="5GC-gX-le4" firstAttribute="top" secondItem="QP3-ZQ-wMP" secondAttribute="top" id="2TM-eh-JV7"/>
-                                            <constraint firstItem="vCJ-Mg-c7q" firstAttribute="top" secondItem="5GC-gX-le4" secondAttribute="bottom" constant="46" id="6T8-ev-DZ0"/>
                                             <constraint firstAttribute="trailing" secondItem="5GC-gX-le4" secondAttribute="trailing" id="6vO-U8-r4z"/>
                                             <constraint firstAttribute="trailing" secondItem="KKB-F7-wTB" secondAttribute="trailing" constant="20" id="Dx8-q8-vmy"/>
                                             <constraint firstItem="8Vn-KB-trc" firstAttribute="leading" secondItem="QP3-ZQ-wMP" secondAttribute="leading" constant="20" id="PvX-jX-Ik6"/>
                                             <constraint firstItem="ea0-bM-rUU" firstAttribute="leading" secondItem="QP3-ZQ-wMP" secondAttribute="leading" constant="20" id="Rz1-Tt-LLl"/>
                                             <constraint firstItem="8Vn-KB-trc" firstAttribute="top" secondItem="ea0-bM-rUU" secondAttribute="bottom" constant="27" id="aQQ-Vl-ENK"/>
                                             <constraint firstItem="KMS-42-PyZ" firstAttribute="leading" secondItem="QP3-ZQ-wMP" secondAttribute="leading" constant="20" id="ecP-sz-OB7"/>
-                                            <constraint firstItem="vCJ-Mg-c7q" firstAttribute="leading" secondItem="QP3-ZQ-wMP" secondAttribute="leading" constant="20" id="eim-nI-GPK"/>
                                             <constraint firstAttribute="trailing" secondItem="8Vn-KB-trc" secondAttribute="trailing" constant="20" id="lin-Ye-oTx"/>
                                             <constraint firstAttribute="bottom" secondItem="KMS-42-PyZ" secondAttribute="bottom" constant="25" id="m3Q-Yf-2SY"/>
+                                            <constraint firstItem="ea0-bM-rUU" firstAttribute="top" secondItem="5GC-gX-le4" secondAttribute="bottom" constant="50" id="nOu-zq-6ox"/>
                                             <constraint firstItem="KKB-F7-wTB" firstAttribute="top" secondItem="8Vn-KB-trc" secondAttribute="bottom" constant="27" id="njv-4d-cas"/>
                                             <constraint firstAttribute="trailing" secondItem="KMS-42-PyZ" secondAttribute="trailing" constant="20" id="rdg-uI-E3u"/>
-                                            <constraint firstItem="ea0-bM-rUU" firstAttribute="top" secondItem="vCJ-Mg-c7q" secondAttribute="bottom" constant="27" id="tiQ-Rw-UjX"/>
                                             <constraint firstItem="KKB-F7-wTB" firstAttribute="leading" secondItem="QP3-ZQ-wMP" secondAttribute="leading" constant="20" id="xuf-yb-EWF"/>
                                             <constraint firstAttribute="trailing" secondItem="ea0-bM-rUU" secondAttribute="trailing" constant="20" id="xve-1b-d4H"/>
                                             <constraint firstItem="5GC-gX-le4" firstAttribute="leading" secondItem="QP3-ZQ-wMP" secondAttribute="leading" id="yKK-8E-adi"/>
-                                            <constraint firstAttribute="trailing" secondItem="vCJ-Mg-c7q" secondAttribute="trailing" constant="20" id="ySw-P4-0Zz"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -515,7 +505,6 @@
                         <outlet property="dateView" destination="8Vn-KB-trc" id="ly9-F4-TsA"/>
                         <outlet property="nameView" destination="ea0-bM-rUU" id="brS-Pd-AOZ"/>
                         <outlet property="scrollView" destination="XTx-H3-Zdk" id="kB9-Ui-iwd"/>
-                        <outlet property="typeView" destination="vCJ-Mg-c7q" id="RMU-Bh-1GA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yVl-FZ-Y9S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -621,9 +610,9 @@
     <color key="tintColor" name="darkGray"/>
     <resources>
         <image name="categoryArrow" width="16" height="10"/>
+        <image name="chart.bar.xaxis" catalog="system" width="128" height="98"/>
         <image name="dollarsign.circle" catalog="system" width="128" height="121"/>
         <image name="plus" catalog="system" width="128" height="113"/>
-        <image name="rectangle.split.3x1" catalog="system" width="128" height="93"/>
         <image name="unChecked" width="17" height="17"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="darkBlue">

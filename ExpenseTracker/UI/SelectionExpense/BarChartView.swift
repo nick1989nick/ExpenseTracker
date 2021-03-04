@@ -16,17 +16,22 @@ class BarChartViewHeader: BarChartView {
         
         xAxis.granularity = 1.0
         xAxis.drawGridLinesEnabled = false
-        xAxis.avoidFirstLastClippingEnabled = true
-    
+        xAxis.avoidFirstLastClippingEnabled = false
+        xAxis.granularityEnabled = true
+        xAxis.labelPosition = .bottom
+        xAxis.labelTextColor = .white
+        xAxis.centerAxisLabelsEnabled = false
+        
         pinchZoomEnabled = false
         scaleXEnabled = false
         scaleYEnabled = false
-        xAxis.labelTextColor = .white
-        leftAxis.labelTextColor = .white
         
         legend.enabled = false
         rightAxis.enabled = false
         rightAxis.drawGridLinesEnabled = false
+        leftAxis.labelTextColor = .white
+        leftAxis.axisMinimum = 0.0
+
         backgroundColor = UIColor(named: "darkBlue")!
     }
     
@@ -40,7 +45,8 @@ class BarChartViewHeader: BarChartView {
         var labelCategories = [String]()
         var colors = [UIColor]()
         for (category, items) in dictionary {
-            labelCategories.append(category.name)
+            
+            labelCategories.append(category.name.substring(to: 4))
             let totalAmount = items.reduce(0.0) { (result, item) -> Double in
                 result + item.amount
             }
@@ -56,13 +62,11 @@ class BarChartViewHeader: BarChartView {
         }
         
         xAxis.valueFormatter = IndexAxisValueFormatter(values: labelCategories)
-        xAxis.granularity = 1.0
-        xAxis.granularityEnabled = true
-        leftAxis.axisMinimum = 0.0
-        xAxis.xOffset = 1
-        xAxis.labelPosition = .bottom
+        xAxis.labelCount = labelCategories.count
+        
         let chartDataSet = BarChartDataSet(entries: dataEntries, label: "")
         chartDataSet.colors = colors
+        chartDataSet.drawValuesEnabled = false
         let chartData = BarChartData(dataSet: chartDataSet)
         data = chartData
     }
